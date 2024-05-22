@@ -1,0 +1,60 @@
+{ 
+    "coffees": [
+        {
+            "id": 1,
+            "origin": "Guatemala",
+            "harvest period": "December through April",
+            "tasting notes": "Chocolate, sweet, nutty",
+            "aromas": "Floral, citrus",
+            "pairings": "Chocolate, peanut butter, citrus"
+        },
+        {
+            "id": 2,
+            "origin": "Kenya",
+            "harvest period": "November through December",
+            "tasting notes": "Bergamot, berries, lemongrass",
+            "aromas": "Fresh, floral",
+            "pairings": "Sweet pastry, strong cheese"
+        }, 
+        {
+            "id": 3,
+            "origin": "Yemen",
+            "harvest period": "November through January",
+            "tasting notes": "Dark chocolate, berries, wood",
+            "aromas": "Spicy, cinnamon, dates",
+            "pairings": "Dates, baklava, blueberries"
+        }, 
+        {
+            "id": 4,
+            "origin": "Indonesia (Sulaweisi)",
+            "harvest period": "July through September",
+            "tasting notes": "Spicy, sweet, smokey",
+            "aromas": "Chocolate, almond",
+            "pairings": "Fruit-infused chocolate, garlic chicken, curry"
+        },
+        {
+            "id": 5,
+            "origin": "Hawaii",
+            "harvest period": "December through February",
+            "tasting notes": "Chocolate, floral",
+            "aromas": "Orchid, cherry, coconut",
+            "pairings": "Fruit salad with lime juice, dark chocolate"
+        },
+        {
+            "id": 6,
+            "origin": "Laos",
+            "harvest period": "November through January",
+            "tasting notes": "Floral, citrus",
+            "aromas": "Chocolate, honey, vanilla",
+            "pairings": "Sweet rice, cassava cake"
+        }, 
+        {
+            "id": 7,
+            "origin": "Colombian",
+            "harvest period": "September through December",
+            "tasting notes": "Fruity, citrusy, nutty",
+            "aromas": "Caramel, cocoa",
+            "pairings": "Coconut, orange, coriander"
+        }
+    ]
+}
