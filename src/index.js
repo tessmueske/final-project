@@ -8,28 +8,34 @@ import About from "./About";
 import Coffees from "./Coffees";
 import Coffee from "./Coffee";
 import NewCoffee from "./NewCoffee";
+import ErrorPage from "./ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
+    element: <Home />,
+    errorElement: <ErrorPage />
   }, 
   {
     path: "/about",
-    element: <About />
+    element: <About />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/coffees",
-    element: <Coffees />
+    element: <Coffees />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/coffees/:id",
-    element: <Coffee />
+    element: <Coffee />,
+    errorElement: <ErrorPage />,
   }, 
   {
     path: "/coffees/new",
-    element: <NewCoffee />
+    element: <NewCoffee />,
+    errorElement: <ErrorPage />
   }
 ])
 
@@ -40,7 +46,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
