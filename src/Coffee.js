@@ -1,12 +1,17 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-function Coffee(){
+function Coffee({ coffee }) {
     return (
-        <div>
-            <p>This is each individual coffees' page!</p>
-        </div>
-    )
-}
+      <div>
+        <h2>{coffee.origin}</h2>
+        <p><strong>Harvest Period:</strong> {coffee["harvest period"]}</p>
+        <p><strong>Tasting Notes:</strong> {coffee["tasting notes"]}</p>
+        <p><strong>Aromas:</strong> {coffee.aromas}</p>
+        <p><strong>Pairings:</strong> {coffee.pairings}</p>
+      </div>
+    );
+  }
+  
 
 export default Coffee;
