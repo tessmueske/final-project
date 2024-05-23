@@ -12,21 +12,21 @@ function NavBar() {
         /* add styling to Navlink */
         className="nav-link"
       >
-        Home
+        take me home
       </NavLink>
 
       <NavLink
         to="/about"
         className="nav-link"
       >
-        About
+        about us
       </NavLink>
 
       <NavLink
         to="/coffees"
         className="nav-link"
       >
-        Coffees
+        coffees
       </NavLink>
 
     </nav>

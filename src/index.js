@@ -11,33 +11,36 @@ import NewCoffee from "./NewCoffee";
 import ErrorPage from "./ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
+const routes = [
   {
-    path: "/",
-    element: <Home />,
-    errorElement: <ErrorPage />
-  }, 
-  {
-    path: "/about",
-    element: <About />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/coffees",
-    element: <Coffees />,
-    errorElement: <ErrorPage />
-  },
-  {
-    path: "/coffees/:id",
-    element: <Coffee />,
-    errorElement: <ErrorPage />,
-  }, 
-  {
-    path: "/coffees/new",
-    element: <NewCoffee />,
-    errorElement: <ErrorPage />
+      path: "/",
+      element: <App />,
+      errorElement: <ErrorPage />,
+      children: [
+           {
+              path: "/",
+              element: <Home />
+          }, 
+          {
+              path: "/about",
+              element: <About />
+          },
+          {
+              path: "/coffees",
+              element: <Coffees />
+          },
+          {
+              path: "/coffees/:id",
+              element: <Coffee />
+          },
+          {
+              path: "/coffees/new",
+              element: <NewCoffee />
+          }
+      ]
   }
-])
+];
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
