@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from "./Home";
 import About from "./About";
+import Coffees from "./Coffees";
+import Coffee from "./Coffee";
+import NewCoffee from "./NewCoffee";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -23,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/coffees/:id",
     element: <Coffee />
+  }, 
+  {
+    path: "/coffees/new",
+    element: <NewCoffee />
   }
 ])
 
