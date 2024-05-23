@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from "./Home";
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import About from "./About";
+import Coffees from "./Coffees"
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
     <div className="App">
       <h1>Hello, world!</h1>
     <Home />
+    <About />
+    <Coffees />
     </div>
 
   );
