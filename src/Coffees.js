@@ -14,7 +14,6 @@ useEffect(() => {
 
     return (
         <div>
-            <NavBar />
             <p>This is my coffees page!</p>
             {coffees.map((coffee) => <Coffee key={coffee.id} coffee={coffee}/>)}
             <NewCoffee />
