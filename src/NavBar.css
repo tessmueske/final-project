@@ -1,16 +1,30 @@
-.nav-link{
-    display: inline-block;
-    box-sizing: border-box;
-    width: 60px;
-    padding: 5px;
-    margin: 0 6px 6px;
-    background: rgb(149, 0, 255);
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background: #f0f0f0;
+    padding: 10px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: rgb(205, 151, 238); 
     text-decoration: none;
-    text-align: center;
-    font-size: min(10vw, 15px) ;
+    font-size: min(10vw, 15px);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background: rgb(149, 0, 255);
     color: rgb(0, 0, 0);
 }
 
 .active {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }

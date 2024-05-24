@@ -4,6 +4,7 @@ import Coffees from "./Coffees";
 import Coffee from "./Coffee";
 import NewCoffee from "./NewCoffee";
 import ErrorPage from "./ErrorPage";
+import Home from "./Home"
 
 const routes = [
     {
@@ -11,6 +12,10 @@ const routes = [
         element: <App />,
         errorElement: <ErrorPage />,
         children: [
+            {
+                path: "/home",
+                element: <Home />
+            },
             {
                 path: "/about",
                 element: <About />
