@@ -39,13 +39,38 @@ function handlePairingChange(e){
 
     return (
         <div>
-            <p>Add your coffee to our index here!</p>
+            <p>add your coffee to our index here!</p>
             <form onSubmit={handleSubmit}>
-                <input type="text" onChange={handleOriginChange} value={origin} />
-                <input type="text" onChange={handleHarvestChange} value={harvest} />
-                <input type="text" onChange={handleTastingChange} value={tasting} />
-                <input type="text" onChange={handleAromaChange} value={aroma} />
-                <input type="text" onChange={handlePairingChange} value={pairing} />
+                <label> 
+                    <strong>origin:</strong>
+                    <input type="text" onChange={handleOriginChange} value={origin} />
+                </label>
+                <br ></br>
+                <br ></br>
+                <label>
+                    <strong>harvest period:</strong>
+                    <input type="text" onChange={handleHarvestChange} value={harvest} />
+                </label>
+                <br ></br>
+                <br ></br>
+                <label>
+                    <strong>tasting notes:</strong>
+                    <input type="text" onChange={handleTastingChange} value={tasting} />
+                </label>
+                <br ></br>
+                <br ></br>
+                <label>
+                    <strong>aromas:</strong>
+                    <input type="text" onChange={handleAromaChange} value={aroma} />
+                </label>
+                <br ></br>
+                <br ></br>
+                <label>
+                    <strong>food pairings:</strong>
+                    <input type="text" onChange={handlePairingChange} value={pairing} />
+                </label>
+                <br ></br>
+                <br ></br>
                 <button type="submit">submit!</button>
             </form>
         </div>
