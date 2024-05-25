@@ -9,6 +9,13 @@ const [pairing, setPairing]=useState("");
 
 function handleSubmit(e){
     e.preventDefault();
+    const newCoffee = {
+        origin: origin,
+        "harvest period": harvest,
+        "tasting notes": tasting,
+        aromas: aroma,
+        pairings: pairing
+    };
     addCoffee(newCoffee)
 }
 
@@ -39,7 +46,7 @@ function handlePairingChange(e){
 
     return (
         <div>
-            <p>add your coffee to our index here!</p>
+            <br></br>
             <form onSubmit={handleSubmit}>
                 <label> 
                     <strong>origin:</strong>

@@ -28,10 +28,10 @@ const routes = [
                 path: "/coffees/:id",
                 element: <Coffee />
             }, 
-            {
-                path: "/coffees/new",
-                element: <NewCoffee />
-            }
+                {
+                    path: "/coffees/new",
+                    element: <NewCoffee />
+                }
         ]
     }
 ];

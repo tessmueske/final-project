@@ -1,6 +1,7 @@
 import React from "react";
 
 function Coffee({ coffee }) {
+
     return (
       <div>
         <h2>{coffee.origin}</h2>
