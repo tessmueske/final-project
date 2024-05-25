@@ -14,7 +14,8 @@ useEffect(() => {
 
     return (
         <div>
-            <p>This is my coffees page!</p>
+            <h2>This is our coffee index! </h2>
+            <h3>You can view our complete list of coffees below:</h3>
             {coffees.map((coffee) => <Coffee key={coffee.id} coffee={coffee}/>)}
             <NewCoffee />
         </div>
