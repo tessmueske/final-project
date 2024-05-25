@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewCoffee({  }) {
+function NewCoffee() {
 const [origin, setOrigin]=useState("");
 const [harvest, setHarvest]=useState("");
 const [tasting, setTasting]=useState("");
@@ -24,7 +24,7 @@ function handleSubmit(e){
       body: JSON.stringify(newCoffee),
     })
       .then((r) => r.json())
-      .then((newCoffee) => console.log(newCoffee));
+      .then(newCoffee);
 }
 
 function handleOriginChange(e){
