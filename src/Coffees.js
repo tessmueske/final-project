@@ -17,12 +17,12 @@ function Coffees() {
       {coffees.map((coffee) => (
         <Coffee key={coffee.id} coffee={coffee} />
       ))}
-      <br />
+      {/* <br />
       <h2>add your coffee here, or click on the form above:</h2>
       <br />
       <NewCoffee />
       <br />
-      <br />
+      <br /> */}
     </div>
   );
 }
