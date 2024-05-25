@@ -5,7 +5,6 @@ import Coffee from "./Coffee";
 import NewCoffee from "./NewCoffee";
 import ErrorPage from "./ErrorPage";
 import Home from "./Home"
-import { useState } from "react";
 
 const routes = [
     {
