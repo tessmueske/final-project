@@ -11,12 +11,20 @@ function handleSubmit(e){
     e.preventDefault();
     const newCoffee = {
         origin: origin,
-        "harvest period": harvest,
-        "tasting notes": tasting,
-        aromas: aroma,
-        pairings: pairing
-    };
-    // addCoffee(newCoffee)
+        harvestPeriod: harvest, 
+        tastingNotes: tasting,  
+        aromas: aroma,       
+        pairings: pairing   
+      };
+      fetch("http://localhost:3000/coffees", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newCoffee),
+    })
+      .then((r) => r.json())
+      .then((newCoffee) => console.log(newCoffee));
 }
 
 function handleOriginChange(e){
