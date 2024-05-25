@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 import NavBar from "./NavBar";
 import { Outlet } from "react-router-dom";
@@ -10,7 +10,7 @@ function App() {
     <NavBar />
       <div className="App">
       <Outlet />
-    </div>
+      </div>
     </>
 
   );

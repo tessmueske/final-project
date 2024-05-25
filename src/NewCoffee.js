@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewCoffee() {
+function NewCoffee({ coffees, addCoffee }) {
 const [origin, setOrigin]=useState("");
 const [harvest, setHarvest]=useState("");
 const [tasting, setTasting]=useState("");
@@ -15,16 +15,16 @@ function handleSubmit(e){
         tastingNotes: tasting,  
         aromas: aroma,       
         pairings: pairing   
-      };
-      fetch("http://localhost:3000/coffees", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newCoffee),
+    };
+    fetch("http://localhost:3000/coffees", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newCoffee),
     })
-      .then((r) => r.json())
-      .then(newCoffee);
+    .then((r) => r.json())
+    .then((newCoffee) => addCoffee(newCoffee));
 }
 
 function handleOriginChange(e){

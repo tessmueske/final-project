@@ -5,6 +5,7 @@ import Coffee from "./Coffee";
 import NewCoffee from "./NewCoffee";
 import ErrorPage from "./ErrorPage";
 import Home from "./Home"
+import { useState } from "react";
 
 const routes = [
     {
@@ -12,6 +13,9 @@ const routes = [
         element: <App />,
         errorElement: <ErrorPage />,
         children: [
+            {
+                index: true, element: <Home />
+            },
             {
                 path: "/home",
                 element: <Home />

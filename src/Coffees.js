@@ -3,7 +3,12 @@ import Coffee from "./Coffee";
 import NewCoffee from "./NewCoffee";
 
 function Coffees() {
-  const [coffees, setCoffees] = useState([]);
+
+const [coffees, setCoffees] = useState([]);
+
+function addCoffee(newCoffee){
+  setCoffees([...coffees, newCoffee])
+}
 
   useEffect(() => {
     fetch("http://localhost:3000/coffees")
@@ -17,12 +22,12 @@ function Coffees() {
       {coffees.map((coffee) => (
         <Coffee key={coffee.id} coffee={coffee} />
       ))}
-      {/* <br />
+      <br />
       <h2>add your coffee here, or click on the form above:</h2>
       <br />
-      <NewCoffee />
+      <NewCoffee addCoffee={addCoffee}/>
       <br />
-      <br /> */}
+      <br />
     </div>
   );
 }
