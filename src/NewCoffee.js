@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewCoffee() {
+function NewCoffee({ addCoffee }) {
 const [origin, setOrigin]=useState("");
 const [harvest, setHarvest]=useState("");
 const [tasting, setTasting]=useState("");
@@ -9,7 +9,7 @@ const [pairing, setPairing]=useState("");
 
 function handleSubmit(e){
     e.preventDefault();
-    //something here
+    addCoffee(newCoffee)
 }
 
 function handleOriginChange(e){
@@ -43,31 +43,31 @@ function handlePairingChange(e){
             <form onSubmit={handleSubmit}>
                 <label> 
                     <strong>origin:</strong>
-                    <input type="text" onChange={handleOriginChange} value={origin} />
+                    <input type="text" onChange={handleOriginChange} placeholder="enter the origin" value={origin} />
                 </label>
                 <br ></br>
                 <br ></br>
                 <label>
                     <strong>harvest period:</strong>
-                    <input type="text" onChange={handleHarvestChange} value={harvest} />
+                    <input type="text" onChange={handleHarvestChange} placeholder="enter the harvest period" value={harvest} />
                 </label>
                 <br ></br>
                 <br ></br>
                 <label>
                     <strong>tasting notes:</strong>
-                    <input type="text" onChange={handleTastingChange} value={tasting} />
+                    <input type="text" onChange={handleTastingChange} placeholder="enter the tasting notes" value={tasting} />
                 </label>
                 <br ></br>
                 <br ></br>
                 <label>
                     <strong>aromas:</strong>
-                    <input type="text" onChange={handleAromaChange} value={aroma} />
+                    <input type="text" onChange={handleAromaChange} placeholder="enter the aromas" value={aroma} />
                 </label>
                 <br ></br>
                 <br ></br>
                 <label>
                     <strong>food pairings:</strong>
-                    <input type="text" onChange={handlePairingChange} value={pairing} />
+                    <input type="text" onChange={handlePairingChange} placeholder="enter the food pairings" value={pairing} />
                 </label>
                 <br ></br>
                 <br ></br>
