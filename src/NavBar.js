@@ -9,6 +9,7 @@ function NavBar() {
     <NavLink to="/home" className="nav-link" >home</NavLink>
     <NavLink to="/about" className="nav-link" >about us</NavLink>
     <NavLink to="/coffees" className="nav-link" >coffees</NavLink>
+    <NavLink to="/coffees/new" className="nav-link" >add your coffee</NavLink>
     </nav>
   );
 };
