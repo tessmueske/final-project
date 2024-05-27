@@ -25,17 +25,15 @@ const routes = [
             },
             {
                 path: "/coffees",
-                element: <Coffees />,
-                children: [
-                    {
-                        path: "/coffees/:id",
-                        element: <Coffee />
-                    }, 
-                    {
-                        path: "/coffees/new",
-                        element: <NewCoffee />
-                    }
-                ]
+                element: <Coffees />
+            },
+            {
+                path: "/coffee",
+                element: <Coffee />
+            }, 
+            {
+                path: "/coffees/new",
+                element: <NewCoffee />
             }
         ]
     }
