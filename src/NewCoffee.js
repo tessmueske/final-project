@@ -20,6 +20,8 @@ function NewCoffee() {
             aromas: aroma,       
             pairings: pairing   
         };
+
+        console.log("Submitting new coffee:", newCoffee); 
     
         fetch("http://localhost:3000/coffees", {
             method: "POST",
@@ -29,7 +31,7 @@ function NewCoffee() {
             body: JSON.stringify(newCoffee),
             })
         .then((r) => r.json())
-        .then((newCoffee) => addCoffee(newCoffee));
+        .then((newCoffee) => console.log(newCoffee));
             setOrigin("");
             setHarvest("");
             setTasting("");
