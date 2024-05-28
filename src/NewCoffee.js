@@ -31,7 +31,7 @@ function NewCoffee() {
             body: JSON.stringify(newCoffee),
             })
         .then((r) => r.json())
-        .then((newCoffee) => console.log(newCoffee));
+        .then((newCoffee) => addCoffee(newCoffee));
             setOrigin("");
             setHarvest("");
             setTasting("");
