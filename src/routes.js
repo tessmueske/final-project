@@ -1,7 +1,6 @@
 import App from './App';
 import About from "./About";
 import Coffees from "./Coffees";
-import Coffee from "./Coffee";
 import NewCoffee from "./NewCoffee";
 import ErrorPage from "./ErrorPage";
 import Home from "./Home"
@@ -27,10 +26,6 @@ const routes = [
                 path: "/coffees",
                 element: <Coffees />
             },
-            {
-                path: "/coffee",
-                element: <Coffee />
-            }, 
             {
                 path: "/coffees/new",
                 element: <NewCoffee />

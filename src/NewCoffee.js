@@ -1,11 +1,19 @@
 import React, { useState } from "react";
+import { Outlet, useOutletContext } from "react-router-dom";
 
-function NewCoffee({ addCoffee }) {
+function NewCoffee() {
+
+//make sure the form clears after submission
+//study useOutletContext
+//form values are derived from state
+
 const [origin, setOrigin]=useState("");
 const [harvest, setHarvest]=useState("");
 const [tasting, setTasting]=useState("");
 const [aroma, setAroma]=useState("");
 const [pairing, setPairing]=useState("");
+
+const {addCoffee} = useOutletContext();
 
 function handleSubmit(e){
     e.preventDefault();
@@ -25,6 +33,11 @@ function handleSubmit(e){
     })
     .then((r) => r.json())
     .then((newCoffee) => addCoffee(newCoffee));
+    setOrigin("");
+    setHarvest("");
+    setTasting("");
+    setAroma("");
+    setPairing("");
 }
 
 function handleOriginChange(e){

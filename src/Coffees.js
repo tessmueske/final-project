@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
 import Coffee from "./Coffee";
 import NewCoffee from "./NewCoffee";
+import { Outlet, useOutletContext } from "react-router-dom";
 
 function Coffees() {
 
-const [coffees, setCoffees] = useState([]);
+const {coffees} = useOutletContext();
 
-function addCoffee(newCoffee){
-  setCoffees([...coffees, newCoffee])
-}
+// const [coffees, setCoffees] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:3000/coffees")
-      .then((r) => r.json())
-      .then((data) => setCoffees(data));
-  }, []);
+// function addCoffee(newCoffee){
+//   setCoffees([...coffees, newCoffee])
+// }
+
+//   useEffect(() => {
+//     fetch("http://localhost:3000/coffees")
+//       .then((r) => r.json())
+//       .then((data) => setCoffees(data));
+//   }, []);
 
   return (
     <div>
@@ -22,12 +25,6 @@ function addCoffee(newCoffee){
       {coffees.map((coffee) => (
         <Coffee key={coffee.id} coffee={coffee} />
       ))}
-      <br />
-      <h2>add your coffee here, or click on the form above:</h2>
-      <br />
-      <NewCoffee addCoffee={addCoffee}/>
-      <br />
-      <br />
     </div>
   );
 }
