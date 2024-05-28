@@ -1,3 +1,13 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is Tess Mueske's final project for React.js! In this project, I have built a coffee index using a self-made db.json (citations listed below). I used React Router and useOutletContext, and I have several client-side routes with different endpoints (/about, /coffees, and coffees/new). Users are able to add their own coffee to the index for others to peruse. Thanks for reading!
+
+Contact:
+tessmueske@gmail.com
++1 612-961-7734
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Citations:
 1. Guatemalan coffee: 
 - https://espressocoffeeguide.com/gourmet-coffee/coffees-of-the-americas/guatemala-coffee/
