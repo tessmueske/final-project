@@ -1,69 +1,66 @@
 import React, { useState } from "react";
-import { Outlet, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
 function NewCoffee() {
 
-//make sure the form clears after submission
-//study useOutletContext
-//form values are derived from state
+    const [origin, setOrigin]=useState("");
+    const [harvest, setHarvest]=useState("");
+    const [tasting, setTasting]=useState("");
+    const [aroma, setAroma]=useState("");
+    const [pairing, setPairing]=useState("");
 
-const [origin, setOrigin]=useState("");
-const [harvest, setHarvest]=useState("");
-const [tasting, setTasting]=useState("");
-const [aroma, setAroma]=useState("");
-const [pairing, setPairing]=useState("");
+    const {addCoffee} = useOutletContext();
 
-const {addCoffee} = useOutletContext();
+    function handleSubmit(e){
+        e.preventDefault();
+        const newCoffee = {
+            origin: origin,
+            harvestPeriod: harvest, 
+            tastingNotes: tasting,  
+            aromas: aroma,       
+            pairings: pairing   
+        };
+    
+        fetch("http://localhost:3000/coffees", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newCoffee),
+            })
+        .then((r) => r.json())
+        .then((newCoffee) => addCoffee(newCoffee));
+            setOrigin("");
+            setHarvest("");
+            setTasting("");
+            setAroma("");
+            setPairing("");
+    }
 
-function handleSubmit(e){
-    e.preventDefault();
-    const newCoffee = {
-        origin: origin,
-        harvestPeriod: harvest, 
-        tastingNotes: tasting,  
-        aromas: aroma,       
-        pairings: pairing   
+    function handleOriginChange(e){
+        e.preventDefault();
+        setOrigin(e.target.value);
     };
-    fetch("http://localhost:3000/coffees", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newCoffee),
-    })
-    .then((r) => r.json())
-    .then((newCoffee) => addCoffee(newCoffee));
-    setOrigin("");
-    setHarvest("");
-    setTasting("");
-    setAroma("");
-    setPairing("");
-}
 
-function handleOriginChange(e){
-    e.preventDefault();
-    setOrigin(e.target.value);
-};
+    function handleHarvestChange(e){
+        e.preventDefault();
+        setHarvest(e.target.value);
+    };
 
-function handleHarvestChange(e){
-    e.preventDefault();
-    setHarvest(e.target.value);
-};
+    function handleTastingChange(e){
+        e.preventDefault();
+        setTasting(e.target.value);
+    };
 
-function handleTastingChange(e){
-    e.preventDefault();
-    setTasting(e.target.value);
-};
+    function handleAromaChange(e){
+        e.preventDefault();
+        setAroma(e.target.value);
+    };
 
-function handleAromaChange(e){
-    e.preventDefault();
-    setAroma(e.target.value);
-};
-
-function handlePairingChange(e){
-    e.preventDefault();
-    setPairing(e.target.value);
-};
+    function handlePairingChange(e){
+        e.preventDefault();
+        setPairing(e.target.value);
+    };
 
     return (
         <div>

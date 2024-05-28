@@ -1,23 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Coffee from "./Coffee";
-import NewCoffee from "./NewCoffee";
-import { Outlet, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
 function Coffees() {
 
-const {coffees} = useOutletContext();
-
-// const [coffees, setCoffees] = useState([]);
-
-// function addCoffee(newCoffee){
-//   setCoffees([...coffees, newCoffee])
-// }
-
-//   useEffect(() => {
-//     fetch("http://localhost:3000/coffees")
-//       .then((r) => r.json())
-//       .then((data) => setCoffees(data));
-//   }, []);
+  const {coffees} = useOutletContext();
 
   return (
     <div>
