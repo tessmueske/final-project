@@ -8,6 +8,8 @@ tessmueske@gmail.com
 
 Here is my blog post about client-side routing with React Router v6! https://dev.to/tessmueske/using-react-router-v6-with-client-side-routing-5dnk
 
+Video walk-through of app: https://youtu.be/GYkRIzRWBAE
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Citations:

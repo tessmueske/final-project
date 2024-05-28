@@ -55,6 +55,14 @@
       "tastingNotes": "Fruity, citrusy, nutty",
       "aromas": "Caramel, cocoa",
       "pairings": "Coconut, orange, coriander"
+    },
+    {
+      "id": "2ff4",
+      "origin": "California",
+      "harvestPeriod": "September",
+      "tastingNotes": "Chocolate",
+      "aromas": "Sweet",
+      "pairings": "Salty"
     }
   ]
 }
